@@ -15,9 +15,7 @@ class Password{
       return(false);
     }
     for (var i = 0; i < this._password.length; i++){
-      print(i);
       if (this._password.codeUnitAt(i) >= 65 &&  this._password.codeUnitAt(i) <= 90){
-        print("here");
         upperCase = true;
       }
       if (this._password.codeUnitAt(i) >= 97 &&  this._password.codeUnitAt(i) <= 122){
