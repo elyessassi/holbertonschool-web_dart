@@ -19,10 +19,10 @@ class User extends Password{
   // method
   toJson(){
     Map? Representation = {};
+    Representation["id"] = this.id;
     Representation["name"] = this.name;
     Representation["age"] = this.age;
     Representation["height"] = this.height;
-    Representation["id"] = this.id;
     return(Representation);
   }
 
