@@ -8,13 +8,14 @@ printRmCharacters() async{
     try{
       parsed_url = Uri.parse("https://rickandmortyapi.com/api/character?page=${i}");
       data = await http.get(parsed_url);
+      data = jsonDecode(data.body)["results"];
+      for (var characterInfo in data){
+        print(characterInfo["name"]);
+      }
     }
     catch(e){
-      return("error caught: $e");
-    }
-    data = jsonDecode(data.body)["results"];
-    for (var characterInfo in data){
-      print(characterInfo["name"]);
+      print("error caught: $e");
+      return;
     }
   }  
 }
