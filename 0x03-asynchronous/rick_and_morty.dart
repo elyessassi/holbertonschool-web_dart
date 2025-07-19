@@ -10,8 +10,7 @@ printRmCharacters() async{
       data = await http.get(parsed_url);
     }
     catch(e){
-      print("error caught: $e");
-      return;
+      return("error caught: $e");
     }
     data = jsonDecode(data.body)["results"];
     for (var characterInfo in data){
