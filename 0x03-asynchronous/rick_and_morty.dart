@@ -10,11 +10,7 @@ printRmCharacters() async{
     data = jsonDecode(data.body)["results"];
     for (var characterInfo in data){
       print(characterInfo["name"]);
-      if (characterInfo["name"] == "Annie"){
-        return;
-      }
     }
-
   }
   catch(e){
     return("error caught: $e");
