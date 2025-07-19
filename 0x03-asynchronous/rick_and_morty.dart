@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:http/http.dart' as http;
 
-Future<void> printRmCharacters() async{
+printRmCharacters() async{
   var data, parsed_url;
   for (var i = 1; i < 43; i++){
     try{
