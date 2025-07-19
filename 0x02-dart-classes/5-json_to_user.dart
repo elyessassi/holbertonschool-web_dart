@@ -15,15 +15,15 @@ class User{
   // method
   toJson(){
     Map? Representation = {};
+    Representation["id"] = this.id;
     Representation["name"] = this.name;
     Representation["age"] = this.age;
     Representation["height"] = this.height;
-    Representation["id"] = this.id;
     return(Representation);
   }
 
   static User fromJson(Map<dynamic, dynamic> userJson){
-    User newInstance = User(name:userJson["name"], age:userJson["age"], height:userJson["height"], id:userJson["id"]);
+    User newInstance = User(id:userJson["id"], name:userJson["name"], age:userJson["age"], height:userJson["height"]);
     return(newInstance);
   }   
 
